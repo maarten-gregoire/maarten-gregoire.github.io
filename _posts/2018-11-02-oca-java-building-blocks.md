@@ -17,25 +17,20 @@ A year ago I succesfully obtained the Java 1.8 OCA certificate. I made some summ
 - Members of a class: fields, methods
 
 Example:
-
+~~~~
  public class Animal {
-
+ 
   String name;
-
+ 
   public String getName() {
-
    return name;
-
+  }
+ 
+  public void setName(String name) {
+   this.name = name;
+  }
 }
-
-public void setName(String name) {
-
- this.name = name;
-
-}
-
- }
-
+~~~~
 ## Keywords
 
 - keyword = word with special meaning in Java
@@ -95,15 +90,11 @@ public void setName(String name) {
 - If trying to execute class without main method, error is thrown, program terminates
 
 example:
-
- public class Zoo {
-
-  public static void main(String[] args) {
-
-  }
-
- }
-
+~~~~
+public class Zoo {
+ public static void main(String[] args) {}
+}
+~~~~
 ### main() method signature:
 
 - Signature is always one of these:
@@ -120,9 +111,9 @@ example:
   - return type (silent)
 - parameter list:
   - Possible parameter list:
-    -- String[] args
-    -- String args[]
-    -- String… args
+    - String[] args
+    - String args[]
+    - String… args
   - &quot;args&quot; can be replaced by any valid variable name
   - args are read when JVM starts
   - []:
@@ -130,9 +121,9 @@ example:
     -- fixed size
     -- index starts at 0
   - … :
-    -- varargs
+    - varargs
   - When trying to access parameter that&#39;s not given when running application:
-    -- ArrayIndexOutOfBoundsException
+    - ArrayIndexOutOfBoundsException
 
 ## Compiling and executing
 
@@ -156,8 +147,8 @@ example:
 - Packages and imports: way to organize classes (logical groupings)
 - Import statement:
   - tells Java which packages to look in for classes
-    -- Use class in unimported package:
-      -- error: cannot be resolved to a type
+    - Use class in unimported package:
+      - error: cannot be resolved to a type
   - example: import java.util.Random
 - package:
   - If it starts with java or javax: came with JDK
@@ -208,13 +199,13 @@ example:
     -- compiler error, type is ambiguous
   - Explicitly import class name: precedence over any wildcards
   - when 2 specific classes with same name imported:
-    -- compiler error, import collides with another import statement
+    - compiler error, import collides with another import statement
   - When you want to use 2 classes with same name:
-    -- option 1:
-      -- use one in the import
-      -- use the other&#39;s fully qualified classname when using it
-    -- option 2:
-      -- Do not use an import and use fully qualified classname for both
+    - option 1:
+      - use one in the import
+      - use the other&#39;s fully qualified classname when using it
+    - option 2:
+      - Do not use an import and use fully qualified classname for both
 
 ## Creating a new package
 
@@ -335,17 +326,17 @@ example:
   - add L to number to make it long
 - Java allows to specify digits in several other formats than decimal
   - octal (0-8): prefix = 0
-    -- example 017
+    - example 017
   - hexadecimal (0-9 and A-F): prefix = 0x or 0X
-    -- example: 0xFF
+    - example: 0xFF
   - binary (0-1): prefix is 0b or 0B
-    -- example 0b10
+    - example 0b10
 - underscores can be added for readabliity to numeric literals (java 7)
   - can be added anywhere except:
-    -- beginning
-    -- end
-    -- right before decimal point
-    -- right after decimal point
+    - beginning
+    - end
+    - right before decimal point
+    - right after decimal point
 
 ## Reference types
 
@@ -375,20 +366,20 @@ example:
   - type + name
 - when declared, value can be given
   - initializing
-    -- variable name + equal sign + value
-    -- can be done right away when declaring
+    - variable name + equal sign + value
+    - can be done right away when declaring
 
 ## Declaring multiple variables
 
 - declare multiple variables in one statement
   - must be of same type
-    -- example: String s1 = &quot;yes&quot;, s2 = &quot;no&quot;;
-    -- example of compile error: int num, String value;
-    -- declaring multiple times same type not allowed:
-      -- example: double d1, double d2; // does not compile
+    - example: String s1 = &quot;yes&quot;, s2 = &quot;no&quot;;
+    - example of compile error: int num, String value;
+    - declaring multiple times same type not allowed:
+      - example: double d1, double d2; // does not compile
   - multiple can be declared while only one may be initialized:
-    -- example: int i1, i2, i3 = 0;
-      -- only i3 is initialized
+    - example: int i1, i2, i3 = 0;
+      - only i3 is initialized
   - separated by comma = declaration of its own
 
 ## Identifiers
@@ -403,13 +394,13 @@ example:
   - name must begin with letter or $ or \_
   - subsequent characters may also be numbers
   - can not be Java reserved word
-    -- keyword that Java has reserved
-    -- case sensitive
-      -- keywords that differ in case are allowed
+    - keyword that Java has reserved
+    - case sensitive
+      - keywords that differ in case are allowed
 - reserved words:
   - abstract, assert, boolean break, byte, case, catch, char, class, continue, default, do, double, else, enum, extends, false, final, finally, float, for, if, implements, import, istanceof, int, interface, long, native, new, null, package, private, protected, public, return, short, static, strictfp, super, switch, synchonized, this, throw, throws, transient, true, try, void, volatile, while
   - const, goto
-    -- not actually used in Java but reserved
+    - not actually used in Java but reserved
 - Java supports unicode characters
 
 ## Default initialization
@@ -431,10 +422,10 @@ example:
 
 - not local
   - class variables
-    -- shared across multiple objects
-    -- keyword static
+    - shared across multiple objects
+    - keyword static
   - instance variables
-    -- = fields
+    - = fields
 - Initialization not required
   - have default value when declared
 
@@ -454,12 +445,12 @@ Remark: When a String which is null is printed with System.out.println, the word
 
 - scope local to the method
   - can not be used outside method
-    -- method parameter
-      -- scope = entire method
-    -- variable declared inside method
-      -- when declared in block, not available outisde block
+    - method parameter
+      - scope = entire method
+    - variable declared inside method
+      - when declared in block, not available outisde block
         - compiler error
-      -- are in scope only after declaration, not before
+      - are in scope only after declaration, not before
   - can never have scope larger than method
 - instance variables
   - available as soon as they are defined
@@ -489,10 +480,10 @@ PIC: Package, import, class
   - looks automatically for objects that aren&#39;t needed anymore
 - Java objects are stored in program memory&#39;s heap:
   - heap = free store
-    -- large pool of unused memory allocated to Java application
-    -- may be quite large depending on environment
-    -- always a limit to it&#39;s size
-    -- if objects stay on heap while new ones keep being made, program runs out of memory
+    - large pool of unused memory allocated to Java application
+    - may be quite large depending on environment
+    - always a limit to it&#39;s size
+    - if objects stay on heap while new ones keep being made, program runs out of memory
 
 ## Garbage collection
 
@@ -500,15 +491,15 @@ PIC: Package, import, class
   - process of automatically freeing memory on the heap by deleting objects that are no longer reachable
   - many algorithms
   - System.gc():
-    -- not guaranteed to run
-    -- method provided by Java
-    -- does not run garbage collection
-    -- only suggests that it&#39;s a good time to kick off a garbage collection run
-    -- Java can ignore the request
+    - not guaranteed to run
+    - method provided by Java
+    - does not run garbage collection
+    - only suggests that it&#39;s a good time to kick off a garbage collection run
+    - Java can ignore the request
   - Object will remain on heap until no longer available
-    -- object no longer reachable when one of these occurs
-      -- object no longer has any references pointing to it
-      -- all references of object have gone out of scope
+    - object no longer reachable when one of these occurs
+      - object no longer has any references pointing to it
+      - all references of object have gone out of scope
   - The end of a program does not mean garbage collection is run
 - objects
   - come in all different shapes and sizes
@@ -535,8 +526,8 @@ PIC: Package, import, class
   - code is defined in classes
   - most classes can be instantiated into objects
   - Java is an oject-oriented language
-    -- not a procedural language
-    -- not a functional programming language
+    - not a procedural language
+    - not a functional programming language
 - access modifiers are provided to protect date from unintended access and modification
 - Platform independent
   - interpreted language
@@ -554,4 +545,4 @@ PIC: Package, import, class
   - no operator overloading
 - Secure
   - runs inside JVM
-    -- creates sandbox that makes it hard for java code to do evil things to computer
+    - creates sandbox that makes it hard for java code to do evil things to computer
