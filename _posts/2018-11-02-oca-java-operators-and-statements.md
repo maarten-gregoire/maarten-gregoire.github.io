@@ -222,7 +222,7 @@ Binary operators include operators that:
 ## Logical operators
 
 - Operators:
-  - &amp;
+  - &
   - |
   - ^
 - Logical operators:
@@ -319,14 +319,12 @@ x ^ y (EXCLUSIVE OR)
   - watch out for misleading indentation
 
 Structure:
-
+~~~~
 If (booleanExpression) {
-
 } else if {
-
 } else {
-
 }
+~~~~
 
 ## If-then-else statement
 
