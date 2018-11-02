@@ -401,20 +401,19 @@ Arrays.binarySearch(numbers, 5) -\&gt; -5
 ### Creating a multidimensional array
 
 - example structures:
-  - type[][] identifier;
-  - type identifier[][];
-  - type[] identifier[]; (2D array)
-  - type[] identifier[][]; (3D array)
-  - type[] identifier1 [], identifier2[][]; (2D array and 3D array)
+  - `type[][] identifier;`
+  - `type identifier[][];`
+  - `type[] identifier[]; (2D array)`
+  - `type[] identifier[][]; (3D array)`
+  - `type[] identifier1 [], identifier2[][]; (2D array and 3D array)`
 - the arrays on the next level can have different sizes (= can be assmetric)
--
 - initializing
   - examples
-    - String[][] rectangle = new String[3][2]:
-    - Int[][] differentsizes = {{1, 4}, {3}, {9, 8, 7}};
+    - `String[][] rectangle = new String[3][2];`
+    - `Int[][] differentsizes = {{1, 4}, {3}, {9, 8, 7}};`
 - Setting
   - Example
-    - Reclangle[0][1] = &quot;set&quot;;
+    - `Reclangle[0][1] = "set";`
 
 # ArrayList
 
