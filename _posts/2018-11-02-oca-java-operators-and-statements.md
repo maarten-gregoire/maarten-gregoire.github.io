@@ -39,9 +39,9 @@ A year ago I succesfully obtained the Java 1.8 OCA certificate. I made some summ
 | Logical operators | &amp;, ^, | |
 | Short-circuit logical operators | &amp;&amp;, || |
 | Ternary operators | Boolean expression ? expression1 : expression2 |
-| Assignment operators | W, +=, -=, \*=, /=, %=, &amp;=, ^=, |=, \&lt;\&lt;=, \&gt;\&gt;=, \&gt;\&gt;\&gt;= |
+| Assignment operators | W, +=, -=, \*=, /=, %=, &amp;=, ^=, |=, <<=, >>=, >>>= |
 
-Only operators that you should know for the OCA exam are listed. Be aware of the existence of unary operators ~ and +, shift operators \&lt;\&lt;, \&gt;\&gt; and \&gt;\&gt;\&gt;, relational operator instanceof, and assignment operators /=, %=, &amp;=, ^=, |=, \&lt;\&lt;=, \&gt;\&gt;= and \&gt;\&gt;\&gt;
+Only operators that you should know for the OCA exam are listed. Be aware of the existence of unary operators ~ and +, shift operators <<, >> and >>>, relational operator instanceof, and assignment operators /=, %=, &amp;=, ^=, |=, <<=, >>= and >>>
 
 # Binary arithmetic operators
 
@@ -206,13 +206,13 @@ Binary operators include operators that:
 - Compare two expressions
 - Return Boolean value
 - Relational operators applied to numeric primitive data types only:
-  - \&lt;
+  - <
     - Strictly less than
-  - \&lt;=
+  - <=
     - Less than or equal
-  - \&gt;
+  - >;
     - Strictly greater than
-  - \&gt;
+  - >=
     -  Greater than or equal to
 - Instanceof operator:
   - A instanceof b
@@ -396,21 +396,15 @@ If (booleanExpression) {
 - Long, long
 
 ### Structure
-
+~~~~
 Switch(variableToTest) {
-
-case constantExpression1:
-
-                Break;
-
-        Case constantExpression2:
-
-                Break;
-
-        Default:
-
+ case constantExpression1:
+  Break;
+ Case constantExpression2:
+  Break;
+ Default:
 }
-
+~~~~
 - Parentheses around variableToTest are required
 - Beginning and ending curly braces are required
 - Break is optional
@@ -445,11 +439,10 @@ case constantExpression1:
     - May terminate after first evaluation and block never executes
 
 ### Structure
-
+~~~~
 While (booleanExpression) {
-
 }
-
+~~~~
 - While keyword
 - Parentheses are required
 - Curly braces
@@ -471,13 +464,12 @@ While (booleanExpression) {
 - variable declared inside block is not known in condition
 
 ### Structure
-
+~~~~
 Do {
-
 } while (booleanExpression);
+~~~~
 
 - Do keyword
-
 - While keyword
 - Parentheses are required
 - Curly braces
@@ -491,11 +483,10 @@ Do {
 ### Basic for loop
 
 #### Structure:
-
+~~~~
 for (initialization; booleanExpression; updateStatement) {
-
 }
-
+~~~~
 - for keyword
   - required
 - parentheses:
@@ -526,10 +517,10 @@ for (initialization; booleanExpression; updateStatement) {
 5. Return to Step 2
 
 #### Infinite loop:
-
-        for(;;) {
-
-        }
+~~~~
+for(;;) {
+}
+~~~~
 
 - for (;;)
   - Compiles
@@ -557,10 +548,10 @@ for (initialization; booleanExpression; updateStatement) {
   - If not, compile error
 - If same type, but type is declared more than once
   - Compile error
-  - Example :
-  - for (long i = 0, long j = 5; i\&lt; 10; i++) {
-
-}
+  - Example : 
+  ~~~~
+  for (long i = 0, long j = 5; i\&lt; 10; i++) {}
+  ~~~~
   - compile error
 
 #### Using loop variables outside loop
@@ -576,11 +567,10 @@ for (initialization; booleanExpression; updateStatement) {
   - Collection objects
 
 #### Structure
-
+~~~~
 for (datatype instance : collection) {
-
 }
-
+~~~~
 - for keyword
   - required
 - parentheses
@@ -598,9 +588,7 @@ for (datatype instance : collection) {
     - instance
       - required
       - every iteration it gets assigned a new value from the array or collection on the right-hand side
-
--
-  - bject to be iterated over
+  - object to be iterated over
     - iterable collection of objects
     - required
     - built-in Java array
@@ -631,8 +619,7 @@ for (datatype instance : collection) {
 - Label = optional pointer to the headof statement
   - Used to jump to or break from
   - Single word followed by colon
-    - Example:
-      - LOOP: for(;;){}
+    - Example: `LOOP: for(;;){}`
   - Only before statements
     - Not before declarations
   - Often usd in loop structures
@@ -650,15 +637,13 @@ for (datatype instance : collection) {
 - Foor loops: end loop early
 
 ### Structure
-
+~~~~
 optionalLabel: while(booleanExpression) {
-
         break optionalLabel;
-
 }
-
-- ptionalLabel
-  - ptional
+~~~~
+- optionalLabel
+  - optional
   - reference to head of loop
 - colon
   - required if optionalLabel is present
@@ -678,15 +663,13 @@ optionalLabel: while(booleanExpression) {
 - causes flow to finish execution current loop
 
 ### Structure
-
+~~~~
 optionalLabel: while(booleanExpression) {
-
-        continue optionalLabel;
-
+ continue optionalLabel;
 }
-
-- ptionalLabel
-  - ptional
+~~~~
+- optionalLabel
+  - optional
   - reference to head of loop
 - colon
   - required if optionalLabel is present
@@ -699,7 +682,6 @@ optionalLabel: while(booleanExpression) {
       - possible to break out of higher level outer loop
     - without label parameter
       - break will terminate nearest inner loop
-    -
 - semicolon
   - required for continue statement
 
