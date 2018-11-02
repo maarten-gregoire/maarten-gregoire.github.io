@@ -39,7 +39,7 @@ A year ago I succesfully obtained the Java 1.8 OCA certificate. I made some summ
 | Logical operators | &amp;, ^, | |
 | Short-circuit logical operators | &amp;&amp;, || |
 | Ternary operators | Boolean expression ? expression1 : expression2 |
-| Assignment operators | W, +=, -=, \*=, /=, %=, &amp;=, ^=, |=, <<=, >>=, >>>= |
+| Assignment operators | =, +=, -=, \*=, /=, %=, &amp;=, ^=, |=, <<=, >>=, >>>= |
 
 Only operators that you should know for the OCA exam are listed. Be aware of the existence of unary operators ~ and +, shift operators <<, >> and >>>, relational operator instanceof, and assignment operators /=, %=, &amp;=, ^=, |=, <<=, >>= and >>>
 
