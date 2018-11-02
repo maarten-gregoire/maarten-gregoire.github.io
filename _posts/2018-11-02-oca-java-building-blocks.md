@@ -6,8 +6,6 @@ categories: OCA Java 1.8
 ---
 A year ago I succesfully obtained the Java 1.8 OCA certificate. I made some summaries to help me study for the accompanying exam. In this blog I'll share the summaries. This one is about Java Building Blocks.
 
-# Java Building Blocks
-
 ## Java class structure
 
 - Classes = basic building blocks
