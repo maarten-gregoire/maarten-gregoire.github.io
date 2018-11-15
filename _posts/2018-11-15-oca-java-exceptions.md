@@ -91,7 +91,7 @@ For search: common use: return codes instead of exceptions. In other methods, us
 ~~~~
 Try {
         // The try block is also referred to as protected code
-} catch (exception\_type identifier) {
+} catch (exceptiontype identifier) {
        // exception handler
 }
 ~~~~
@@ -133,7 +133,6 @@ Try {
 - The only reason why a finally block would not be excecuted if System.exit is actually called in try or catch.
 
 # Catching various types of exceptions
-
 ## Hierarchy
 
 When different types of exceptions are thrown by the same method, for determining the hierarchy this is important:
