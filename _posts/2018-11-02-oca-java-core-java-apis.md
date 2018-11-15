@@ -399,6 +399,14 @@ Arrays.binarySearch(numbers, 5) -\&gt; -5
 
 ### Creating a multidimensional array
 
+- example structures:
+  - `type[][] identifier;`
+  - `type identifier[][];`
+  - `type[] identifier[]; (2D array)`
+  - `type[] identifier[][]; (3D array)`
+  - `type[] identifier1 [], identifier2[][]; (2D array and 3D array)`
+
+
 
 # ArrayList
 
