@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "OCA: Exceptions"
+date:   2018-11-02 11:33:27 +0100
+categories: OCA Java 1.8
+---
 A while ago I succesfully obtained the Java 1.8 OCA certificate. I made some summaries to help me study for the accompanying exam. In this blog I'll share the summaries. This one is about exceptions.
 
 # Exceptions
