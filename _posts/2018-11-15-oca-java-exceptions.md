@@ -88,17 +88,13 @@ For search: common use: return codes instead of exceptions. In other methods, us
 # Handling an exception
 
 ## Try statement
-
-_Try {_
-
-_        // The try block is also referred to as protected code_
-
-_} catch (exception\_type identifier) {_
-
-_        // exception handler_
-
-_}_
-
+~~~~
+Try {
+        // The try block is also referred to as protected code
+} catch (exception\_type identifier) {
+       // exception handler
+}
+~~~~
 - Try keyword (required)
 - If an exception is thrown in a try statement, the catch clauses attempt to catch it
 - The identifier refers to the caught exception object
@@ -110,26 +106,19 @@ _}_
 &quot;Catch block&quot; = &quot;catch clause&quot;
 
 ## Finally Block
+~~~~
+Try {
+       //protected code_
+} catch (exceptiontype identifier) {
+        //exception handler
+} finally {
+        //finally block
+}
 
-_Try {_
-
-_        //protected code_
-
-_} catch (exceptiontype identifier) {_
-
-_        //exception handler_
-
-_} finally {_
-
-_        //finally block_
-
-_}_
-
-- _A finally block can only appear as part of a try statement_
-
-- _The finally block_ _always __executes__ , whether or not an exception occurs in the try block_
-- When there is no catch clause, the finally block is required
-- The finally block is always the last block
+- A finally block can only appear as part of a try statement.
+- The finally block always executes, whether or not an exception occurs in the try block.
+- When there is no catch clause, the finally block is required.
+- The finally block is always the last block.
 
 ## Flow of try catch exception:
 
