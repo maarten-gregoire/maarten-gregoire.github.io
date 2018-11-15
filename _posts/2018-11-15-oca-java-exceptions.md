@@ -114,7 +114,7 @@ Try {
 } finally {
         //finally block
 }
-
+~~~~
 - A finally block can only appear as part of a try statement.
 - The finally block always executes, whether or not an exception occurs in the try block.
 - When there is no catch clause, the finally block is required.
