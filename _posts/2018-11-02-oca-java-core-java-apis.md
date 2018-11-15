@@ -409,7 +409,7 @@ Arrays.binarySearch(numbers, 5) -\&gt; -5
 - initializing
   - examples
     - `String[][] rectangle = new String[3][2];`
-    - `Int[][] differentsizes = {{1, 4}, {3}, {9, 8, 7}};`
+    - `Int[][] differentsizes = /{/{1, 4}, {3}, {9, 8, 7}};`
 - Setting
   - Example
     - `Reclangle[0][1] = "set";`
