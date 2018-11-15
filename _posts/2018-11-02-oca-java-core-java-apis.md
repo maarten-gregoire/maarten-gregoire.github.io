@@ -22,8 +22,7 @@ A year ago I succesfully obtained the Java 1.8 OCA certificate. I made some summ
     - if both operands are numeric: + means numeric addition
     - if either operand is String: + means concatenation
     - evaluated left to right
-    ## Immutability
-
+## Immutability
 - Immutable:
   - When a String is created, not allowed to change
     - Cannot be made larger
@@ -171,7 +170,7 @@ A year ago I succesfully obtained the Java 1.8 OCA certificate. I made some summ
   - number of characters the sequence can hold
   - when Stringbuilder is constructed
     - starts at default capacity (16)
-    - r capacity chosen by programmer
+    - or capacity chosen by programmer
 
 ## Important StringBuilder Methods
 
@@ -400,19 +399,19 @@ Arrays.binarySearch(numbers, 5) -\&gt; -5
 ### Creating a multidimensional array
 
 - example structures:
-  - `type[][] identifier;`
-  - `type identifier[][];`
-  - `type[] identifier[]; (2D array)`
-  - `type[] identifier[][]; (3D array)`
-  - `type[] identifier1 [], identifier2[][]; (2D array and 3D array)`
+  - type[][] identifier;
+  - type identifier[][];
+  - type[] identifier[]; (2D array)
+  - type[] identifier[][]; (3D array)
+  - type[] identifier1 [], identifier2[][]; (2D array and 3D array)
 - the arrays on the next level can have different sizes (= can be assmetric)
 - initializing
   - examples
-    - `String[][] rectangle = new String[3][2];`
-    - `Int[][] differentsizes = { {1, 4}, {3}, {9, 8, 7} };`
+    - String[][] rectangle = new String[3][2];
+    - Int[][] differentsizes = { {1, 4}, {3}, {9, 8, 7} };
 - Setting
   - Example
-    - `Reclangle[0][1] = "set";`
+    - Reclangle[0][1] = "set";
 
 
 # ArrayList
