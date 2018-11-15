@@ -642,4 +642,136 @@ Arrays.binarySearch(numbers, 5) -\&gt; -5
         - at least hour and minute for time
       - possible to give a LocalDate and a LocalTime
       - do not combine LocalDate or LocalDateTime with separate values, does not compile
-  
+  - not allowed to create LocalDate, LocalDateTime or LocalTime through constructor
+    - does not compile
+    - always use static methods (of)
+
+## Manipulating dates and times
+
+- date and time classes are immutable
+  - need to be assigned to remember value
+  - are not changed by a method
+- methods:
+  - plusDays()
+    - example
+      - date = date.plusDays(2);
+    - adds number of days
+  - plusWeeks
+    - example
+      - date = date.plusWeeks(1-:
+    - adds 7 days \* number of weeks
+  - plusMonths
+    - adds number of months
+    - Java knows leap years
+      - If day does not exist in month, last day of month is used
+  - plusYears
+    - adds number of years
+- methods can be chained
+- doing time manipulations on LocalDate does not compile
+- doing date manipulation on LocalTime does not compile
+
+|   | Can call on LocalDate | Can call on LocalTime | Can call on LocalDateTime |
+| --- | --- | --- | --- |
+| plusYears/minusYears | yes | no | yes |
+| plusMonths/minusMonths | yes | no | yes |
+| plusWeeks/minusWeeks | yes | no | yes |
+| plusDays/minusDays | yes | no | yes |
+| plusHours/minusHours | no | yes | yes |
+| plusMinutes/minusMinutes | no | yes | yes |
+| plusSeconds/minusSeconds | no | yes | yes |
+| plusNanos/minusNanos | np | yes | Yes |
+
+## Periods
+
+- converting date to long
+  - LocalDate.toEpochDay()
+    - Number of days since January 1, 1970
+  - LocalDateTime.toEpochSecond()
+    - Number of seconds since January 1, 1970
+  - LocalTime does not have epoch method
+  - Timezone: GMT
+- Period class
+  - Examples
+    - period.ofYears(1);
+    - period.ofMonths(3);
+    - period.ofWeeks(3);
+    - period.ofDays(2);
+    - period.of(1, 0, 7); // every year and 7 days
+  - methods cannot be chained
+    - does compile but does not do what expected
+    - gives compiler warning
+  - plus method on LocalDate LocalDateTime, LocalTime
+    - adding month to LocalTime does not work
+      - UnsupportedTemporalTypeException
+
+## Formatting dates and times
+
+- Many methods to get information from date or time
+  - Examples
+    - date.getDayOfWeek();
+    - date.getMonth();
+    - date.getYear();
+    - date.getDayOfYear();
+- DateTimeFormatter
+  - Examples
+    - date.format(DateTimeFormatter.ISO\_LOCAL\_DATE));
+    - time.format(DateTimeFormatter.ISO\_LOCAL\_TIME));
+    - dateTime.format(DateTimeFormatter.ISO\_LOCAL\_DATE\_TIME));
+  - ISO is standard for dates
+  - Do not apply time formatters on dates or date formatters on time
+  - Predefined formats:
+    - Example
+      - DateTimeformatter shortDateTime = DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT);
+    - Usage example
+      - shortDateTime.format(dateTime);
+      - dateTime.format(shortDateTime);
+    - exception when formatting is not possible
+
+| DateTimeFormatter f = DateTimeFormatter.\_\_\_ (FormatStyle.SHORT); | Calling f.format(localDate) | Calling f.format(localDateTime) | Calling f.format(localTime) |
+| --- | --- | --- | --- |
+| ofLocalizedDate | Legal, shows whole object | Logal – shows date part | Runtime exception |
+| ofLocalizedDateTime | Throws runtime exception | Legal – shows whole object | Runtime exception |
+| ofLocalizedTime | Throws runtime exception | Legal – shows time part | Legal – shows whole opbject |
+
+- Predefined formats:
+  - SHORT
+    - Example
+      - 1/20/20 11:12 AM
+  - MEDIUM
+    - Example
+      - Jan 20, 2020 11:12:34 AM
+- You can create your own
+  - Example
+    - DateTimeFormatter.ofPattern(&quot;MMMM dd, yyyy, hh:mm&quot;);
+  - Syntax
+    - MMMM
+      - Example: January
+    - MMM
+      - Example Jan
+    - MM
+      - Example: 01
+    - M
+      - example: 1
+      - example: 12
+    - d or dd
+      - day of month
+    - ,
+      - Output comma
+    - yy or yyyy
+      - year
+    - h or hh
+      - hour
+    - :
+      - Output colon
+    - mm
+      - minute
+
+## Parsing dates and times
+
+- convert String to date or time with formatter or without
+  - examples
+    - DateTimeFormatter f = DateTimeFormatter.ofPattern(&quot;MM dd yyyy&quot;);
+LocalDate.parse(&quot;01 02 2015, f);
+    - LocalTime time = LocalTime.parse(&quot;11:22&quot;);
+
+
